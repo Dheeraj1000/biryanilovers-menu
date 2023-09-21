@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background: url('https://img.freepik.com/free-photo/golden-cutlery-with-textile-plate-dark-background-top-view_1220-6580.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .App-logo {
