@@ -3,7 +3,8 @@ import { Container, Typography, Grid, Card, CardContent, CardMedia, FormGroup } 
 import RadioButtonCheckedRoundedIcon from '@mui/icons-material/RadioButtonCheckedRounded';
 import menuData from './data';
 import { red } from '@mui/material/colors';
-
+import CallIcon from '@mui/icons-material/Call';
+import TextsmsIcon from '@mui/icons-material/Textsms'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
@@ -36,8 +37,40 @@ function Menu() {
 
   return (
     <Container style={{display: 'flex', flexDirection: 'column',alignItems: 'center', justifyContent: 'center' }}>
-      <img src='./assets/biryani.png' alt='' style={{height: 'auto', marginTop: '0.2rem', width: '100%', maxWidth: '100px', borderRadius: '50%'}}/>
-   
+      <img src='./assets/biryani.png' alt='' style={{height: 'auto', marginTop: '1.5rem', width: '100%', maxWidth: '100px', borderRadius: '50%'}}/>
+      
+     
+     
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop: '1rem' }}>
+        <Typography variant="h5" style={{ color: 'white', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>
+          TAKE AWAY & HOME DELIVERY
+        </Typography>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <CallIcon style={{ color: 'white', fontSize: '1rem', marginRight: '0.5rem' }} />
+          <Typography variant="body1" style={{ color: 'white', fontSize: '1rem' }}>
+            Place your order now:
+          </Typography>
+          <a href="tel:9885461510">
+            <Typography variant="body1" style={{ color: 'white', fontSize: '1rem', fontWeight: 'bold', marginLeft: '0.2rem' }}>
+              9885461510
+            </Typography>
+          </a>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '0.2rem' }}>
+          <TextsmsIcon style={{ color: 'white', fontSize: '1rem', marginRight: '0.5rem' }} />
+          <Typography variant="body1" style={{ color: 'white', fontSize: '1rem' }}>
+            WhatsApp:
+          </Typography>
+          <a href="https://wa.me/918454078061" target="_blank" rel="noopener noreferrer">
+            <Typography variant="body1" style={{ color: 'white', fontSize: '1rem', fontWeight: 'bold', marginLeft: '0.2rem' }}>
+              8454078061
+            </Typography>
+          </a>
+        </div>
+      </div>
+
+
+
         <FormGroup style={{flexDirection: 'row'}}>
       <FormControlLabel control={<Switch checked= {category === ''} onChange={() => setCategory('')} />} label="All" style={{color: 'white'}}/>
       <FormControlLabel control={<Switch checked= {category === 'Veg Starters'} onChange={() => setCategory('Veg Starters')}/>} label="Veg Starters" style={{color: 'white' , fontSize: '1rem'}} />
