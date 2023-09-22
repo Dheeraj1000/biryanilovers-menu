@@ -7,6 +7,9 @@ import CallIcon from '@mui/icons-material/Call';
 import TextsmsIcon from '@mui/icons-material/Textsms'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {AiOutlineWhatsApp} from 'react-icons/ai'
+
 
 function Menu() {
 
@@ -57,8 +60,9 @@ function Menu() {
           </a>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '0.2rem' }}>
-          <TextsmsIcon style={{ color: 'white', fontSize: '1rem', marginRight: '0.5rem' }} />
-          <Typography variant="body1" style={{ color: 'white', fontSize: '1rem' }}>
+        <FontAwesomeIcon icon="fa-brands fa-whatsapp" style={{color: "#29a706",fontSize: '1rem', marginRight: '0.5rem'}} />
+          <AiOutlineWhatsApp style={{color: "#29a706",fontSize: '1rem', marginRight: '0.5rem'}}/>
+            <Typography variant="body1" style={{ color: 'white', fontSize: '1rem' }}>
             WhatsApp:
           </Typography>
           <a href="https://wa.me/918454078061" target="_blank" rel="noopener noreferrer">
@@ -79,7 +83,7 @@ function Menu() {
       <FormControlLabel control={<Switch checked= {category === 'Fried Rice'} onChange={() => setCategory('Fried Rice')} />} label="Fried Rice"  style={{color: 'white', fontSize: '1rem'}}/>
      
       </FormGroup>
-      
+
       <Grid container spacing={2}>
         {filterData.map((item) => (
           <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
